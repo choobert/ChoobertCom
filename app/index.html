@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link rel="icon" type="image/png" href="/header/choobert.png">
+
+    <title>Choobert</title>
+    <!-- bower:css -->
+    <!-- endinject -->
+
+    <!-- inject:css -->
+    <!-- endinject -->
+
+    <!-- bower:js -->
+    <!-- endinject -->
+
+    <!-- inject:js -->
+    <!-- endinject -->
+
+    <!-- templates:js -->
+    <!-- endinject -->
+  </head>
+
+  <body ng-app="choobert" ng-strict-di>
+    <div class="container">
+      <div class="frame">
+        <div ng-include="'/header/header.html'"></div>
+
+        <div class="content-container">
+          <ui-view autoscroll="true"></ui-view>
+        </div>
+
+        <div ng-include="'/footer/footer.html'"></div>
+      </div>
+    </div>
+
+    <!-- inject:external_scripts:html -->
+    <!-- endinject -->
+  </body>
+</html>

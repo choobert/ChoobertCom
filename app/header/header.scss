@@ -1,0 +1,50 @@
+@import 'imports';
+
+.header {
+  background-color: $dark-blue;
+  color: $white;
+  width: 100%;
+  height: 70px;
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  .header-brand {
+    float: left;
+    font-size: 18px;
+    line-height: 50px;
+    height: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+  }
+
+  .nav-bar {
+    float: right;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    height: 50px;
+
+    li {
+      position: relative;
+      display: inline;
+      line-height: 50px;
+      height: 50px;
+      margin-right: 25px;
+    }
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    transition: color .2s linear;
+  }
+
+  a:visited {
+    color: $white;
+  }
+
+  a:hover {
+    color: $blue;
+  }
+}

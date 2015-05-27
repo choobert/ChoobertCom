@@ -1,0 +1,38 @@
+<div id="contact" ng-controller="ContactCtrl as contact" class="panel-body">
+
+  <div class="title">
+    Contact Me
+  </div>
+
+  <div class="form-container">
+    <form name="contactform" role="form">
+
+      <div>
+        <label for="inputName">Name</label>
+        <input id="inputName" name="name" type="text" ng-model="contact.name" placeholder="Your Name" required></input>
+      </div>
+
+      <div>
+        <label for="inputEmail">Email</label>
+        <input id="inputEmail" name="email" type="email" ng-model="contact.email" ng-class="{error: contactform.email.$error.email}" placeholder="Your Email" required></input>
+      </div>
+
+      <div>
+        <label for="inputSubject">Subject</label>
+        <input id="subject" name="subject" type="text" ng-model="contact.subject" placeholder="Subject Message" required></input>
+      </div>
+
+      <div>
+        <label for="inputMessage">Message</label>
+        <textarea id="message" name="message" type="text" ng-model="contact.message" placeholder="Your Message..." required></textarea>
+      </div>
+
+      <div>
+        <button type="submit" ng-click="contact.sendMessage(contactform)">
+          Send Message
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

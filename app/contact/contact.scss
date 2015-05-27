@@ -1,0 +1,26 @@
+@import 'imports';
+
+#contact {
+  border: $base-border;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: $base-border-radius;
+  overflow: hidden;
+
+  .title {
+    background-color: $light-gray;
+    padding: 15px;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    font-weight: 600;
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+
+  .error {
+    border-color: #ff0000;
+  }
+}

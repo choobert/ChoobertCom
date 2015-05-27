@@ -1,0 +1,16 @@
+@import 'imports';
+
+.hero {
+  background-color: $light-green;
+  height: 340px;
+  width: 100%;
+
+  .hero-image {
+    display: block;
+    padding-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 25px;
+    height: auto;
+  }
+}
