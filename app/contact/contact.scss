@@ -1,11 +1,11 @@
 @import 'imports';
 
 #contact {
-  border: $base-border;
-  width: 500px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+  border: $base-border;
   border-radius: $base-border-radius;
+  width: 500px;
   overflow: hidden;
 
   .title {
