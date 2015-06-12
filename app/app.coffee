@@ -5,7 +5,6 @@ angular.module('choobert', [
   'angular-loading-bar'
 
   # Our modules
-  'choobert.about'
   'choobert.blog'
   'choobert.contact'
   'choobert.header'
