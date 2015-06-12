@@ -1,9 +1,9 @@
 @import 'imports';
 
 .hero {
-  background-color: $light-green;
+  background-color: $hero-background;
   width: 100%;
-  height: 340px;
+  height: 375px;
 
   .hero-image {
     display: block;
@@ -12,5 +12,10 @@
     padding-top: 25px;
     padding-bottom: 25px;
     height: auto;
+  }
+
+  .tagline {
+    color: $white;
+    text-align: center;
   }
 }
