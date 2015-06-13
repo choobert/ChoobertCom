@@ -1,6 +1,9 @@
 angular.module('choobert.homepage')
-.controller 'HomepageCtrl', ->
+.controller 'HomepageCtrl', (DataService) ->
 
-  @value = "world"
+  # start refreshing
+  console.log "Attempting to get data"
+  DataService.refreshData()
+  @projects = DataService.projects
 
   return this
