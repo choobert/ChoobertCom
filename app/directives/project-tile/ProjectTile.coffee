@@ -1,5 +1,5 @@
 angular.module('choobert')
-.directive 'destRow', ->
+.directive 'projectTile', ->
   restrict: 'E'
   scope:
     project: '='

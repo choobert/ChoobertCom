@@ -1,7 +1,5 @@
 <div id="homepage">
 
-  <div>
-    <pre>{{home.projects}}</pre>
-  </div>
+  <project-tile ng-repeat="project in home.projects track by project.id" project="project"></project-tile>
 
 </div>
