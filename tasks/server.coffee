@@ -35,6 +35,7 @@ gulp.task 'test/dist/e2e/webserver', ['build/dist'], ->
 
 corsMiddleware = (req, res, next) ->
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000")
+  res.setHeader("Access-Control-Allow-Credentials", "true")
   next()
 
 gulp.task 'server/data', ->
