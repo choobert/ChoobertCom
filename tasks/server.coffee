@@ -32,3 +32,13 @@ gulp.task 'test/dist/e2e/webserver', ['build/dist'], ->
     port: 3001
     root: 'build/dist'
     middleware: -> [rewrite]
+
+corsMiddleware = (req, res, next) ->
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000")
+  next()
+
+gulp.task 'server/data', ->
+  connect.server
+    port: 8000
+    root: 'mock_data/'
+    middleware: -> [corsMiddleware]

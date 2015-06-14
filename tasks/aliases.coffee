@@ -22,4 +22,4 @@ gulp.task 'test/unit/debug', ['server/dev','build/dev', 'watch', 'test/unit/debu
 gulp.task 'dist', ['build/dist', 'server/dist']
 
 # Run the dev server and test runner while watching for changes
-gulp.task 'default', ['build/dev', 'server/dev', 'watch']
+gulp.task 'default', ['build/dev', 'server/dev', 'server/data', 'watch']

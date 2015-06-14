@@ -5,7 +5,6 @@ angular.module('choobert')
 
   refreshData: ->
     projectsUrl = "projects.json"
-    # $http.get(config.apiBase + projectsUrl).then (response) =>
-    #   if response?
-    #     _.extend(@projects, response.data)
-    console.log "refreshing data"
+    $http.get(config.apiBase + projectsUrl).then (response) =>
+      if response?
+        _.extend(@projects, response.data)
