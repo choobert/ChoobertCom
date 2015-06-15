@@ -2,19 +2,19 @@
   {
     "id": "1",
     "title": "Block Runner",
-    "image": "image-path.png",
+    "image": "assets/portfolio/blockrunner.png",
     "link": "link.html"
   },
   {
     "id": "2",
-    "title": "Breadjamin Butters",
-    "image": "image-path.png",
+    "title": "Meatly Jam",
+    "image": "assets/portfolio/meatlyjam.png",
     "link": "link.html"
   },
   {
     "id": "3",
     "title": "Shoot em Up",
-    "image": "image-path.png",
+    "image": "assets/portfolio/shmup.png",
     "link": "link.html"
   }
 ]

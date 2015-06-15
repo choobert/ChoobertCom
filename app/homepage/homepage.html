@@ -1,5 +1,11 @@
 <div id="homepage">
 
-  <project-tile ng-repeat="project in home.projects track by project.id" project="project"></project-tile>
+  <div class="title">
+    Recent Projects
+  </div>
+
+  <div class="projects">
+    <project-tile ng-repeat="project in home.projects track by project.id" project="project"></project-tile>
+  <div>
 
 </div>

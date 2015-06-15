@@ -1,0 +1,14 @@
+@import 'imports';
+
+.project-tile {
+  display: inline-block;
+  margin: 15px;
+  height: 188px;
+  width: 250px;
+  background-color: $blue;
+
+  img {
+    width: 250px;
+    height: 100%;
+  }
+}
