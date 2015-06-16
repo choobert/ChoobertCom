@@ -1,5 +1,7 @@
-<div class="project-tile">
-  {{project.title}}
-
+<div class="project-tile" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
   <img class="project-image" src="{{project.image}}">
+
+  <div ng-show="hover" class="project-hover">
+    {{project.title}}
+  </div>
 </div>

@@ -2,10 +2,19 @@
 
 .project-tile {
   display: inline-block;
+  position: relative;
   margin: 15px;
-  height: 188px;
-  width: 250px;
   background-color: $blue;
+  width: 250px;
+  height: 188px;
+
+  .project-hover {
+    position: absolute;
+    top: 0;
+    background-color: $blue;
+    width: 100%;
+    text-align: center;
+  }
 
   img {
     width: 250px;
