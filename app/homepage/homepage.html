@@ -1,11 +1,21 @@
 <div id="homepage">
 
-  <div class="title">
-    Recent Projects
+  <div class="section">
+    <div class="title">
+      Recent Projects
+    </div>
+    <div class="projects">
+      <project-tile ng-repeat="project in home.previewProjects() track by project.id" project="project"></project-tile>
+    </div>
   </div>
 
-  <div class="projects">
-    <project-tile ng-repeat="project in home.previewProjects() track by project.id" project="project"></project-tile>
-  <div>
+  <div class="section">
+    <div class="title">
+      Recent Blog Entries
+    </div>
+    <div class="blogs">
+      blog stuff
+    </div>
+  </div>
 
 </div>
