@@ -1,4 +1,10 @@
 angular.module('choobert.portfolio')
-.controller 'PortfolioCtrl', ->
+.controller 'PortfolioCtrl', (DataService) ->
+
+  # start refreshing
+  DataService.refreshData()
+
+  @projects = ->
+    DataService.projects()
 
   return this

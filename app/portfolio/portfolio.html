@@ -1,3 +1,11 @@
 <div id="portfolio">
-  My Portfolio!
+
+  <div class="title">
+    All Projects
+  </div>
+
+  <div class="projects">
+    <project-tile ng-repeat="project in portfolio.projects() track by project.id" project="project"></project-tile>
+  <div>
+
 </div>

@@ -3,6 +3,8 @@ angular.module('choobert.homepage')
 
   # start refreshing
   DataService.refreshData()
-  @projects = DataService.projects
+
+  @previewProjects = ->
+    _.take(DataService.projects(), 3)
 
   return this

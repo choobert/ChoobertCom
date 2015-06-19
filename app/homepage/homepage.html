@@ -5,7 +5,7 @@
   </div>
 
   <div class="projects">
-    <project-tile ng-repeat="project in home.projects track by project.id" project="project"></project-tile>
+    <project-tile ng-repeat="project in home.previewProjects() track by project.id" project="project"></project-tile>
   <div>
 
 </div>
