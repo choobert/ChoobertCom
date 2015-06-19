@@ -4,16 +4,36 @@
   display: inline-block;
   position: relative;
   margin: 15px;
+  border-radius: $base-border-radius;
   background-color: $blue;
   width: 250px;
   height: 188px;
+  overflow: hidden;
 
   .project-hover {
     position: absolute;
     top: 0;
+    opacity: .8;
     background-color: $blue;
+    cursor: pointer;
     width: 100%;
-    text-align: center;
+    height: 100%;
+    color: $white;
+
+    .project-title {
+      padding-top: 20px;
+      text-align: center;
+      font-family: $base-font-family;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .project-search {
+      position: absolute;
+      bottom: 50px;
+      left: 90px;
+      font-size: 75px;
+    }
   }
 
   img {
