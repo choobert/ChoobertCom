@@ -3,7 +3,7 @@
     {
       "date": "06/24/2015",
       "description": "Latest works, you're a block. You should run.",
-      "id": 1,
+      "id": "1",
       "image": "assets/portfolio/blockrunner.png",
       "src": "//itch.io/embed/21471",
       "title": "Block Runner"
@@ -11,7 +11,7 @@
     {
       "date": "03/28/2015",
       "description": "My #MeatlyJam Game Competition submission. Theme life of a Game Developer. Somewhat of a pessimistic outlook on what the game development industry is.",
-      "id": 2,
+      "id": "2",
       "image": "assets/portfolio/meatlyjam.png",
       "src": "//itch.io/embed/21471",
       "title": "Meatly Jam"
@@ -19,17 +19,17 @@
     {
       "date": "07/25/2014",
       "description": "Ever play a WWII shooter pilot game? …Figures. Well you have never played mine!! Having followed the guide by Bryan Bibat (link below) on the basics of the Phaser Engine, try to defeat all enemy ships without getting yourself blown up! Enemies will drop POW items to power up your guns, but getting hit will lose your extra power. Play it now, it’s harder than it looks!",
-      "id": 3,
+      "id": "3",
       "image": "assets/portfolio/shmup.png",
-      "src": "//itch.io/embed/21471",
+      "src": "//itch.io/embed/29026",
       "title": "Shoot Em Up"
     },
     {
       "date": "07/25/2013",
       "description": "Ever play a WWII shooter pilot game? …Figures. Well you have never played mine!! Having followed the guide by Bryan Bibat (link below) on the basics of the Phaser Engine, try to defeat all enemy ships without getting yourself blown up! Enemies will drop POW items to power up your guns, but getting hit will lose your extra power. Play it now, it’s harder than it looks!",
-      "id": 4,
+      "id": "4",
       "image": "assets/portfolio/shmup.png",
-      "src": "//itch.io/embed/21471",
+      "src": "//itch.io/embed/29026",
       "title": "Another Old Project"
     }
   ]

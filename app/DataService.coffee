@@ -13,4 +13,4 @@ angular.module('choobert')
     @data.projects
 
   project: (id) ->
-    _.find(@projects(), 'id', id)
+    _.find(@projects(), { 'id': id})

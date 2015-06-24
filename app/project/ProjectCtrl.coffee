@@ -3,16 +3,13 @@ angular.module('choobert.portfolio')
 
   DataService.refreshData()
 
-  @projectId = $stateParams.projectId
-
   @project = ->
-    DataService.project(@projectId)
+    DataService.project($stateParams.projectId)
 
   @projectTitle = ->
     @project()?.title
 
   @projectGameUrl = ->
-    console.log "trusting: " + $sce.trustAsResourceUrl(@project()?.src)
     @project()?.src
 
   return this

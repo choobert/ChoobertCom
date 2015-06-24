@@ -1,8 +1,9 @@
 # Declare the main module and dependencies
 angular.module('choobert', [
   # External modules
-  'ui.router'
   'angular-loading-bar'
+  'ngSanitize'
+  'ui.router'
 
   # Our modules
   'choobert.blog'
