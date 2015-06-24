@@ -1,6 +1,6 @@
 angular.module('choobert.portfolio').config ($stateProvider) ->
   $stateProvider
-    .state 'project',
-      url: '/{projectId}'
+    .state 'portfolio.project',
+      url: '/Project/{projectId}'
       templateUrl: '/directives/project/project.html'
       controller: 'ProjectCtrl as project'

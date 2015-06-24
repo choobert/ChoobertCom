@@ -1,7 +1,7 @@
 <div class="project-tile" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
   <img class="project-image" src="{{project.image}}">
 
-  <a ng-show="hover" class="project-hover" ui-sref="project({{project.id}})">
+  <a ng-show="hover" class="project-hover" ng-click="proj.click()">
     <div class="project-title">{{project.title}}</div>
     <div class="fa fa-search project-search"></div>
   </a>

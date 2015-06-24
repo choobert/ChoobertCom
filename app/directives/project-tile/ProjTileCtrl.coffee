@@ -1,10 +1,10 @@
 angular.module('choobert')
-.controller 'ProjectTileCtrl', ($scope) ->
+.controller 'ProjectTileCtrl', ($scope, $state) ->
 
   @project = $scope.project
 
   @click = ->
-    console.log "clicked"
-    console.log @project
+    $state.go('portfolio.project', {projectId: @project.id, project: @project})
+
 
   return this
