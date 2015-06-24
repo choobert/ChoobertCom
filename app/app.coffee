@@ -7,7 +7,6 @@ angular.module('choobert', [
   # Our modules
   'choobert.blog'
   'choobert.contact'
-  'choobert.header'
   'choobert.homepage'
   'choobert.portfolio'
 ])

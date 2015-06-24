@@ -1,6 +1,7 @@
 angular.module 'choobert.homepage', [
-  'ui.router'
   'choobert.config'
+  'choobert.portfolio'
+  'ui.router'
 ]
 
 angular.module('choobert.homepage').config ($stateProvider) ->
