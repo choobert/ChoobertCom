@@ -1,4 +1,5 @@
 angular.module 'choobert.portfolio', [
+  'ngSanitize'
   'ui.router'
 ]
 

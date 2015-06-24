@@ -4,7 +4,7 @@ angular.module('choobert')
   @project = $scope.project
 
   @click = ->
-    $state.go('portfolio.project', {projectId: @project.id, project: @project})
+    $state.go('project', {projectId: @project.id, project: @project})
 
 
   return this
