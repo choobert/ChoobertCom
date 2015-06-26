@@ -1,7 +1,23 @@
 <div class="section">
   <div class="title">{{projCtrl.projectTitle()}}</div>
 
-  {{projCtrl.projectGameUrl()}}
-
-  <iframe ng-src="{{projCtrl.projectGameUrl() | trustUrl}}" width="552" height="168" frameborder="0"></iframe>
+  <div class="project-main">
+    <iframe ng-src="{{projCtrl.projectGameUrl() | trustUrl}}" width="552" height="168" frameborder="0"></iframe>
+    <div>{{projCtrl.projectDescription()}}</div>
+  </div>
+  <div class="project-sidebar">
+    <div class="project-details-header">
+      Project Details
+    </div>
+    <div class="project-details-info">
+      <div>
+        <div class="label">Date</div>
+        <div class="data">{{projCtrl.projectDate()}}</div>
+      </div>
+      <div>
+        <div class="label">Author</div>
+        <div class="data">{{projCtrl.projectAuthor()}}</div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -9,7 +9,17 @@ angular.module('choobert.portfolio')
   @projectTitle = ->
     @project()?.title
 
+  @projectDate = ->
+    @project()?.date
+
+  @projectAuthor = ->
+    @project()?.author
+
+  @projectDescription = ->
+    @project()?.description
+
   @projectGameUrl = ->
     @project()?.src
+
 
   return this

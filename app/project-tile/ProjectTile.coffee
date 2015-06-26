@@ -4,4 +4,4 @@ angular.module('choobert')
   scope:
     project: '='
   controller: "ProjectTileCtrl as proj"
-  templateUrl: "/directives/project-tile/project-tile.html"
+  templateUrl: "/project-tile/project-tile.html"
