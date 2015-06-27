@@ -2,7 +2,7 @@
   "projects": [
     {
       "author": "Choobert",
-      "carousel": ["../../../../assets/portfolio/blockrunner/carousel-blockrunner-1.png", "../../assets/portfolio/meatlyjam/carousel-blockrunner-2.png", "../../assets/portfolio/meatlyjam/carousel-blockrunner-3.png"],
+      "carousel": ["../../assets/portfolio/blockrunner.png"],
       "date": "06/24/2015",
       "description": "Latest works, you're a block. You should run.",
       "id": "1",

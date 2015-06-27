@@ -6,8 +6,16 @@ angular.module('choobert.portfolio')
     $scope.slides
 
   @getSlide = ->
-    str = @slides()?[@currentIndex]
-    # console.log str
+    @slides()?[@currentIndex]
+
+  @getBubbleClass = (index) ->
+    if @currentIndex == index
+      return "fa-circle"
+    else
+      return "fa-circle-o"
+
+  @setSlide = (index) ->
+    @currentIndex = index
 
   @clickRight = ->
     @currentIndex++
