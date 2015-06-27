@@ -4,7 +4,9 @@
   <div class="project-main">
     <iframe ng-src="{{projCtrl.projectGameUrl() | trustUrl}}" width="552" height="168" frameborder="0"></iframe>
     <div>{{projCtrl.projectDescription()}}</div>
+    <carousel slides="projCtrl.projectCarousel()"></carousel>
   </div>
+
   <div class="project-sidebar">
     <div class="project-details-header">
       Project Details
@@ -20,4 +22,5 @@
       </div>
     </div>
   </div>
+
 </div>

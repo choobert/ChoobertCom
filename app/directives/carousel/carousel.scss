@@ -1,0 +1,24 @@
+@import 'imports';
+
+.carousel {
+  position: relative;
+
+  img {
+    width: 720px;
+    height: 600px;
+  }
+
+  .right {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    font-size: 50px;
+  }
+
+  .left {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    font-size: 50px;
+  }
+}

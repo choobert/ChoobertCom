@@ -21,5 +21,7 @@ angular.module('choobert.portfolio')
   @projectGameUrl = ->
     @project()?.src
 
+  @projectCarousel = ->
+    @project()?.carousel
 
   return this

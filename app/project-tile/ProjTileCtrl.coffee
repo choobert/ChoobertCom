@@ -1,4 +1,4 @@
-angular.module('choobert')
+angular.module('choobert.portfolio')
 .controller 'ProjectTileCtrl', ($scope, $state) ->
 
   @project = $scope.project

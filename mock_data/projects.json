@@ -2,30 +2,43 @@
   "projects": [
     {
       "author": "Choobert",
+      "carousel": ["../../../../assets/portfolio/blockrunner/carousel-blockrunner-1.png", "../../assets/portfolio/meatlyjam/carousel-blockrunner-2.png", "../../assets/portfolio/meatlyjam/carousel-blockrunner-3.png"],
       "date": "06/24/2015",
       "description": "Latest works, you're a block. You should run.",
       "id": "1",
-      "image": "assets/portfolio/blockrunner.png",
+      "image": "../../assets/portfolio/blockrunner.png",
       "src": "//itch.io/embed/21471",
       "title": "Block Runner"
     },
     {
       "author": "Choobert",
+      "carousel": ["../../assets/portfolio/meatlyjam/carousel-meatlyjam-1.png", "../../assets/portfolio/meatlyjam/carousel-meatlyjam-2.png", "../../assets/portfolio/meatlyjam/carousel-meatlyjam-3.png"],
       "date": "03/28/2015",
       "description": "My #MeatlyJam Game Competition submission. Theme life of a Game Developer. Somewhat of a pessimistic outlook on what the game development industry is.",
       "id": "2",
-      "image": "assets/portfolio/meatlyjam.png",
+      "image": "../../assets/portfolio/meatlyjam.png",
       "src": "//itch.io/embed/21471",
       "title": "Meatly Jam"
     },
     {
       "author": "Choobert",
+      "carousel": ["../../assets/portfolio/shmup/carousel-shmup-1.png", "../../assets/portfolio/shmup/carousel-shmup-2.png", "../../assets/portfolio/shmup/carousel-shmup-3.png"],
       "date": "07/25/2014",
       "description": "Ever play a WWII shooter pilot game? …Figures. Well you have never played mine!! Having followed the guide by Bryan Bibat on the basics of the Phaser Engine, try to defeat all enemy ships without getting yourself blown up! Enemies will drop POW items to power up your guns, but getting hit will lose your extra power. Play it now, it’s harder than it looks!",
       "id": "3",
-      "image": "assets/portfolio/shmup.png",
+      "image": "../../assets/portfolio/shmup.png",
       "src": "//itch.io/embed/29026",
       "title": "Shoot Em Up"
+    },
+    {
+      "author": "Choobert",
+      "carousel": ["../../assets/portfolio/mountolympus/carousel-mountolympus-1.png", "../../assets/portfolio/mountolympus/carousel-mountolympus-2.png"],
+      "date": "",
+      "description": "Mount Olympus is a game idea that I have not fully fleshed out yet. Hopefully to become a RPG where helping a Greek God will bless you with new abilities. As shown one ability would be fire! Set the world ablaze! Although functionality is extremely limited, and not 100% correct, you can take it for a quick spin.",
+      "id": "4",
+      "image": "../../assets/portfolio/mountolympus.png",
+      "src": "",
+      "title": "Mount Olympus"
     }
   ]
 }
