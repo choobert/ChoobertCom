@@ -7,6 +7,12 @@ $project-details-width: 200px;
   width: 675px;
 }
 
+.project-carousel {
+  margin-right: auto;
+  margin-left: auto;
+  width: 720px;
+}
+
 .project-sidebar {
   float: right;
   border-bottom: 2px solid $light-gray;
@@ -25,7 +31,7 @@ $project-details-width: 200px;
     font-size: $base-font-size;
     font-weight: 600;
   }
-  
+
   .project-details-info {
 
     .label {

@@ -1,13 +1,12 @@
-<div class="carousel" ng-mouseover="hover=true" ng-mouseleave="hover=false">
+<div class="carousel">
 
   <img src="{{carousel.getSlide()}}">
 
-  <i class="fa fa-arrow-circle-left  left"  ng-show="hover" ng-click="carousel.clickLeft()" ></i>
-  <i class="fa fa-arrow-circle-right right" ng-show="hover" ng-click="carousel.clickRight()"></i>
+  <i class="fa fa-chevron-left  arrow left  {{carousel.getHoverLeft()}}"   ng-click="carousel.clickLeft()"  ng-mouseover="carousel.setHoverLeft(true)"  ng-mouseleave="carousel.setHoverLeft(false)" ></i>
+  <i class="fa fa-chevron-right arrow right {{carousel.getHoverRight()}}" ng-click="carousel.clickRight()" ng-mouseover="carousel.setHoverRight(true)" ng-mouseleave="carousel.setHoverRight(false)"></i>
 
   <div class="bubbles">
     <i class="fa {{carousel.getBubbleClass($index)}}" ng-repeat="slide in carousel.slides()" ng-click="carousel.setSlide($index)"></i>
   </div>
-
 
 </div>

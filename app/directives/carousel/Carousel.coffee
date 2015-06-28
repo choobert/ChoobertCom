@@ -1,4 +1,4 @@
-angular.module('choobert')
+angular.module('choobert.directives')
 .directive 'carousel', ->
   restrict: 'E'
   scope:
