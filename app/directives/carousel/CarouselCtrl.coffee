@@ -1,9 +1,18 @@
 angular.module('choobert.directives')
-.controller 'CarouselCtrl', ($scope) ->
+.controller 'CarouselCtrl', ($interval, $scope) ->
 
   @currentIndex = 0
   @hoverLeft = false
   @hoverRight = false
+
+  @resetTimer = ->
+    $interval.cancel(@timer)
+    @timer = $interval =>
+      @clickRight()
+      return
+    , 2500
+
+  @resetTimer()
 
   @slides = ->
     $scope.slides
@@ -36,11 +45,12 @@ angular.module('choobert.directives')
     @currentIndex--
     if @currentIndex < 0
       @currentIndex = @slides().length - 1
+    @resetTimer()
 
   @clickRight = ->
     @currentIndex++
     if @currentIndex >= @slides().length
       @currentIndex = 0
-
+    @resetTimer()
 
   return this
