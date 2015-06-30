@@ -4,8 +4,10 @@
     <div class="title">
       Recent Projects
     </div>
-    <div class="projects">
-      <project-tile ng-repeat="project in home.previewProjects() track by project.id" project="project"></project-tile>
+    <div class="projects-container">
+      <div class="projects">
+        <project-tile ng-repeat="project in home.previewProjects() track by project.id" project="project"></project-tile>
+      </div>
     </div>
   </div>
 

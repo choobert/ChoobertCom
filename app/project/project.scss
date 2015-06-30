@@ -3,17 +3,18 @@
 $project-details-width: 200px;
 
 .project-carousel {
+  display: block;
   margin-right: auto;
   margin-left: auto;
   padding-top: 15px;
-  width: 720px;
+  max-width: 720px;
 }
 
 .project-main {
   margin-right: auto;
   margin-left: auto;
   padding-top: 15px;
-  width: 675px;
+  width: 100%;
 
   h1 {
     text-align: center;

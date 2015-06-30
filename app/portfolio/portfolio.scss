@@ -1,24 +1,12 @@
 @import 'imports';
 
 #portfolio {
-  margin-right: auto;
-  margin-left: auto;
-  border: $base-border;
-  border-radius: $base-border-radius;
-  width: 900px;
-  overflow: hidden;
+  
+  .projects-container {
+    text-align: center;
 
-  .title {
-    background-color: $light-gray;
-    padding: 15px;
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    font-weight: 600;
-  }
-
-  .projects {
-    margin-right: auto;
-    margin-left: auto;
-    width: 840px;
+    .projects {
+      display: inline-block;
+    }
   }
 }

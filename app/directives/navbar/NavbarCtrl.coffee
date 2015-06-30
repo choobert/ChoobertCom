@@ -2,8 +2,6 @@ angular.module('choobert.directives')
 .controller 'NavbarCtrl', ->
 
 angular.element(document).ready ->
-  console.log "doc ready"
-
   domMobile = document.getElementById('js-centered-navigation-mobile-menu')
   mobileToggle = angular.element(domMobile)
   mobileToggle.unbind()

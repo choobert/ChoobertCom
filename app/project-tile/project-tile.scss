@@ -1,8 +1,8 @@
 @import 'imports';
 
 .project-tile {
-  display: inline-block;
   position: relative;
+  float: left;
   margin: 15px;
   border-radius: $base-border-radius;
   background-color: $blue;
@@ -13,6 +13,7 @@
   .project-hover {
     position: absolute;
     top: 0;
+    left: 0;
     opacity: .8;
     background-color: $blue;
     cursor: pointer;
