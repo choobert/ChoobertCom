@@ -1,0 +1,58 @@
+<div class='section'>
+  <div class='title'>Raspberry Pi as a Web Server</div>
+  <div class='entry'>
+
+    First and foremost setup port forwarding on your router. It is likely that your ISP is preventing you from
+    using port 80 and you will need to select another option, I chose 8080. There are many places online for how to
+    set up port forwarding for your router so I will not explain it in detail here. However below is a screenshot
+    of the configuration I made to my D-Link router under Advanced-&gt;Port Forwarding for my server.
+
+    <div class='center'>
+      <a href="https://choobert.files.wordpress.com/2015/02/port_forwarding.png">
+        <img src="https://choobert.files.wordpress.com/2015/02/port_forwarding.png?w=300" alt="port_forwarding"  />
+      </a>
+    </div>
+
+    Now the fun part, getting everything installed on the Raspberry Pi. To start I like to make sure everything
+    is up to date and then move into the installations. I assume that everything installs successfully for you as it did for me.
+
+    <pre class='cmd'>
+      sudo apt-get update
+      sudo apt-get install apache2 php5 libapache2-mod-php5 -Y
+      sudo apt-get install sqlite3 php5-sqlite3
+      sudo chown www-data /var/www</pre>
+
+    This last line is important. Without the correct permissions, your PHP pages will continue to fail whenever they
+    attempt to access any sqlite data. Now that everything is downloaded and in place, let's do some light configuration of Apache.
+
+    <pre class='cmd'>
+      sudo nano /etc/apache2/sites-enabled/000-default</pre>
+
+    The very first line should read
+    <pre class='cmd'>
+      &lt;VirtualHost *:80&gt;</pre>
+
+    The "80" is the current port Apache is listening on. You must alter this number to the port chosen during Port Forwarding.
+
+    <br><br>
+    Optionally, if you would like to set up your server for use of .htaccess this is a great opportunity to look for the line:
+
+    <pre class='cmd'>
+      AllowOverride None</pre>
+
+    and replace it with:
+
+    <pre class='cmd'>
+      AllowOverride ALL</pre>
+
+    With these configuration changes you must have Apache reload its configurations and reboot.
+
+    <pre class='cmd'>
+      sudo /etc/init.d/apache2 reload
+      sudo service apache2 restart</pre>
+
+    You should now have a functioning web server!!! Attempt to connect to it in your browser now, the path will likely
+    be similar to http://raspberrypi.local:8080 . If you just received a page that says, "It works!" then
+    pat yourself on the back and get ready for some sqlite3 to add some data.
+  </div>
+</div>
