@@ -8,6 +8,7 @@ angular.module('choobert', [
   # Our modules
   'choobert.blog'
   'choobert.contact'
+  'choobert.directives'
   'choobert.homepage'
   'choobert.portfolio'
 ])

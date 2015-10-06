@@ -1,11 +1,14 @@
 <div id="portfolio">
 
-  <div class="title">
-    All Projects
+  <div class="section">
+    <div class="title">
+      All Projects
+    </div>
+    <div class="projects-container">
+      <div class="projects">
+        <project-tile ng-repeat="project in portfolio.projects() track by project.id" project="project"></project-tile>
+      </div>
+    </div>
   </div>
-
-  <div class="projects">
-    <project-tile ng-repeat="project in portfolio.projects() track by project.id" project="project"></project-tile>
-  <div>
 
 </div>

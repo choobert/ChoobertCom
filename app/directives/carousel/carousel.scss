@@ -1,0 +1,42 @@
+@import 'imports';
+
+.carousel {
+  position: relative;
+  color: $white;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .arrow {
+    @include transition(transform 0.25s linear);
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    font-size: 50px;
+
+    &.hovered {
+      transform: scale(1.5);
+    }
+
+    &.right {
+      right: 10px;
+    }
+
+    &.left {
+      left: 10px;
+    }
+  }
+
+  .bubbles {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+
+    i {
+      margin: 2px;
+      cursor: pointer;
+    }
+  }
+}
