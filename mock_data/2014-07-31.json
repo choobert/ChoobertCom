@@ -19,12 +19,7 @@
         },
         {
           "type": "center",
-          "content": [
-            "<div>",
-            "YOUTUBE VIDEO GOES HERE",
-            " <iframe width='560' height='315' src='https://www.youtube.com/embed/itjqmzZcCvg' frameborder='0' allowfullscreen></iframe>",
-            "</div>"
-          ]
+          "youtube": "itjqmzZcCvg"
         },
         {
           "type": "text",

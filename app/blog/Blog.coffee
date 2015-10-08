@@ -1,6 +1,7 @@
 angular.module 'choobert.blog', [
   'ngSanitize'
   'ui.router'
+  'youtube-embed'
 ]
 
 angular.module('choobert.blog').config ($stateProvider) ->

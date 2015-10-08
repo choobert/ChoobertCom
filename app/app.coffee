@@ -4,6 +4,7 @@ angular.module('choobert', [
   'angular-loading-bar'
   'ngSanitize'
   'ui.router'
+  'youtube-embed'
 
   # Our modules
   'choobert.blog'
