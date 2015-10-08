@@ -1,7 +1,11 @@
 <div id="blog">
-  <div class="section">
-    <div class="title">
-      Blog Coming Soon
+  <div class='section' ng-repeat='entry in blog.blog()'>
+    <div class='title'>{{entry.title}}</div>
+    <div class='entry' ng-repeat='section in entry.content'>
+      <div class='{{section.type}}'>
+        <h3 ng-if='section.title != null'>{{section.title}}</h3>
+        <div ng-bind-html='section.content.join("\n")'></div>
+      </div>
     </div>
   </div>
 </div>

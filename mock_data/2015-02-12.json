@@ -1,0 +1,117 @@
+{
+  "blog": [
+    {
+      "title": "Raspberry Pi as a Web Server",
+      "date": "05/02/2015",
+      "content": [
+        {
+          "type": "text",
+          "content": [
+            "First and foremost setup port forwarding on your router. It is likely that your ISP is preventing you from",
+            "using port 80 and you will need to select another option, I chose 8080. There are many places online for how to",
+            "set up port forwarding for your router so I will not explain it in detail here. However below is a screenshot",
+            "of the configuration I made to my D-Link router under Advanced-&gt;Port Forwarding for my server."
+          ]
+        },
+        {
+          "type": "center",
+          "content": [
+            "<a href='https://choobert.files.wordpress.com/2015/02/port_forwarding.png'>",
+            "  <img src='https://choobert.files.wordpress.com/2015/02/port_forwarding.png?w=300' alt='port_forwarding' />",
+            "</a>"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Now the fun part, getting everything installed on the Raspberry Pi. To start I like to make sure everything",
+            "is up to date and then move into the installations. I assume that everything installs successfully for you as it did for me."
+          ]
+        },
+        {
+          "type": "cmd",
+          "content": [
+            "<pre>",
+            " sudo apt-get update",
+            " sudo apt-get install apache2 php5 libapache2-mod-php5 -Y",
+            " sudo apt-get install sqlite3 php5-sqlite3",
+            " sudo chown www-data /var/www</pre>"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "This last line is important. Without the correct permissions, your PHP pages will continue to fail whenever they",
+            "attempt to access any sqlite data. Now that everything is downloaded and in place, let's do some light configuration of Apache."
+          ]
+        },
+        {
+          "type": "cmd",
+          "content": [
+            "<pre>sudo nano /etc/apache2/sites-enabled/000-default</pre>"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "The very first line should read:"
+          ]
+        },
+        {
+          "type": "cmd",
+          "content": [
+            "<pre>&lt;VirtualHost *:80&gt;</pre>"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "The \"80\" is the current port Apache is listening on. You must alter this number to the port chosen during Port Forwarding.",
+            "<br><br>",
+            "Optionally, if you would like to set up your server for use of .htaccess this is a great opportunity to look for the line:"
+          ]
+        },
+        {
+          "type": "cmd",
+          "content": [
+            "<pre>AllowOverride None</pre>"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "and replace it with:"
+          ]
+        },
+        {
+          "type": "cmd",
+          "content": [
+            "<pre>AllowOverride ALL</pre>"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "With these configuration changes you must have Apache reload its configurations and reboot."
+          ]
+        },
+        {
+          "type": "cmd",
+          "content": [
+            "<pre>",
+            "  sudo /etc/init.d/apache2 reload",
+            "  sudo service apache2 restart</pre>"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "You should now have a functioning web server!!! Attempt to connect to it in your browser now, the path will likely",
+            "be similar to http://raspberrypi.local:8080 . If you just received a page that says, \"It works!\" then",
+            "pat yourself on the back and get ready for some sqlite3 to add some data."
+          ]
+        }
+      ]
+    }
+  ]
+}

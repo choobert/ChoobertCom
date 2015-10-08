@@ -1,0 +1,32 @@
+{
+  "blog": [
+    {
+      "title": "Shoot 'em Up'",
+      "date": "07/10/2014",
+      "content": [
+        {
+          "type": "text",
+          "content": [
+            "Who likes games?",
+            "<br><br>",
+            "Ever play a WWII shooter pilot game? ...Figures. Well you have never played mine!! Having followed",
+            "<a href='https://leanpub.com/html5shootemupinanafternoon/'>the guide by Bryan Bibat</a>",
+            "on the basics of the <a href='http://phaser.io'>Phaser Engine,</a> try to defeat all enemy ships without getting yourself",
+            "blown up! Enemies will drop POW items to power up your guns, but getting hit will lose your extra power.",
+            "Play it now, it's harder than it looks!"
+          ]
+        },
+        {
+          "type": "center",
+          "content": [
+            "<a href='http://choobert.github.io/games/shmup/'>",
+            "  Play the game here!",
+            "  <br><br>",
+            "  <img src='https://choobert.files.wordpress.com/2015/02/screenshot.png'></img>",
+            "</a>"
+          ]
+        }
+      ]
+    }
+  ]
+}

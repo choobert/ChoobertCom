@@ -1,0 +1,74 @@
+{
+  "blog": [
+    {
+      "title": "MySQL - \"error processing mysql-server-5.5 (--configure)\" SOLVED",
+      "date": "02/03/2015",
+      "content": [
+        {
+          "type": "text",
+          "content": [
+            "After intending to use sqlite3 as my database for my Raspberry Pi server, the number of limitations seemed overwhelmingly",
+            "annoying to not give MySQL another shot at an installation.  After several problems with the installation resulting in several",
+            "different areas revealing themselves in different way. Again, there are many blogs that provided solutions but none of them",
+            "spelled out the solution for me. My initial errors looked like this:"
+          ]
+        },
+        {
+          "type": "cmd",
+          "content": [
+            "<pre>[FAIL] Starting MySQL database server: mysqld . . . . . . . . . . . . . . failed!",
+              "invoke-rc.d: initscript mysql, action \"start\" failed.",
+              "dpkg: error processing mysql-server-5.5 (--configure):",
+              "subprocess installed post-installation script returned error exit status 1",
+              "Errors were encountered while processing:",
+              "mysql-server-5.5</pre>"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "The most frustrating part of this was that the logs were empty in both /var/log/mysql.log and var/log/mysql.err.",
+            "After searching and searching I noticed that the user mysql did not have permissions on any of the mysql folders. So, I ran the following"
+          ]
+        },
+        {
+          "type": "cmd",
+          "content": [
+            "<pre>chown mysql /etc/mysql -R",
+              "chown mysql /var/lib/mysql -R",
+              "chown mysql /var/run/mysqld -R</pre>"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "After attempting to start the service again, I actually got some info in mysql.log. However, what I believe is the real",
+            "fix came later. If you followed my previous Raspberry Pi guides, you would have set up a static IP Address for yourself.",
+            "For some reason, the Raspberry Pi no longer identifies itself with 127.0.0.1 <strong>BUT</strong> MySQL seems to think it should!",
+            "Edit the configuration and look for the line below and replace it with your static IP Address."
+          ]
+        },
+        {
+          "type": "cmd",
+          "content": [
+            "<pre>nano /etc/mysql/my.cnf",
+              "bind-address = 127.0.0.1</pre>"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "If you are still experiencing problems, look through your daemon.log file and search for mysqld errors.",
+            "Hopefully they are able to point you in the right direction."
+          ]
+        },
+        {
+          "type": "cmd",
+          "content": [
+            "<pre>nano /var/log/daemon.log</pre>"
+          ]
+        }
+      ]
+    }
+  ]
+}

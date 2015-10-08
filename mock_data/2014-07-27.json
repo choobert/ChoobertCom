@@ -1,0 +1,55 @@
+{
+  "blog": [
+    {
+      "title": "Beginnings of Unity",
+      "date": "07/27/2015",
+      "content": [
+        {
+          "type": "",
+          "content": [
+            "I have spend the last few weeks working through several Unity 3D and Blender tutorials getting a general",
+        		"understanding of 3D game development. Many of the tutorials I have completed have been proved by",
+        		"<a href='http://quill18.com'>Quill18</a> ",
+        		"on both his website and YouTube channel. Following these guides I have successfully implemented weapons in a First",
+        		"Person Shooter game that act similar to both an automatic and semi-automatic rifle as well as a rocket launcher with",
+        		"splash damage. My current goal is to create a multiplayer FPS game that is capable of combining several weapons",
+        		"and allowing for actual multiplayer play.",
+        		"<br><br>",
+        		"Having completed the first 8 portions of the Multiplayer FPS guide provided by Quill18, I have successfully",
+        		"created an environment in which up to 20 players can connect to each other using the Photon 3D Network",
+        		"(free accounts are limited to 20 unique connections) and explore the environment. The repository is on my GitHub, check it out!"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Useful Links",
+          "content": [
+            "<ul>",
+            " <li><a href='http://www.blender.org/'>Blender</a> - Open Source 3D graphics and animation software</li>",
+            " <li><a href='https://www.mixamo.com/'>Mixamo</a> - Character and animation models both for free and for a paid subscription.</li>",
+            " <li><a href='https://www.exitgames.com/en/PUN'>Photon Unity 3D Network</a> - Framework for real-time multiplayer games and applications.</li>",
+            " <li><a href='https://www.youtube.com/user/quill18creates'>Quill 18 Youtube Channel</a> - Provider of many Unity 3D tutorials</li>",
+            " <li><a href='http://unity3d.com/'>Unity 3D</a> - Cross-platform development tool including game engine and IDE</li>",
+            "</ul>"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Useful Tips for Blender",
+          "content": [
+            "<ul>",
+            " <li>A = Select/Deselect All</li>",
+            " <li>B = Select Edges/Faces/Vertices</li>",
+            " <li>E = Extrude - Adjust single Edge/Face/Vertex</li>",
+            " <li>G = Grab - Pull on Edge/Face/Vertex affecting surroundings</li>",
+            " <li>Shift + A = Insert List</li>",
+            " <li>Shift + Middle Click = Move around in Blender</li>",
+            " <li>Space = Search for an action</li>",
+            " <li>Tab = Switch between Object and Edit Mode</li>",
+            "</ul>"
+          ]
+        }
+      ]
+    }
+  ]
+}

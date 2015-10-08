@@ -1,0 +1,56 @@
+{
+  "blog": [
+    {
+      "title": "Configuring Nano",
+      "date": "02/17/2015",
+      "content": [
+        {
+          "type": "text",
+          "content": [
+            "If you're anything like me all of the work you have done through SSH is getting fairly tiring when a tab seems to be a",
+            "monstrous amount of space in nano. Have no fear, every user can have their own unique preferences for nano within their user folder.",
+            "<br><br>",
+            "My personal preferenes are:",
+            "<ol>",
+            " <li>Spaces instead of tabs</li>",
+            " <li>Tab size should be 4 spaces</li>",
+            " <li>No case sensitivity when searching</li>",
+            "</ol>",
+            "<br><br>",
+            "Keep in mind that I prefer a very limited number of configurations and to view many other configurations visit the",
+            "<a href='http://www.nano-editor.org/dist/v2.1/nanorc.5.html'>nano-editors webpage.</a>",
+            "<br><br>",
+            "First step in creating the configurations is to create the configuration file .nanorc. This should be placed in your",
+            "home directory (/home/{userid}/.nanorc)."
+          ]
+        },
+        {
+          "type": "cmd",
+          "content": [
+            "<pre>nano ~/.nanorc</pre>"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Then add the following lines to the file and save."
+          ]
+        },
+        {
+          "type": "cmd",
+          "content": [
+            "<pre>set tabsize 4",
+              "set tabstospaces",
+              "unset casesensitive</pre>"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Test it out"
+          ]
+        }
+      ]
+    }
+  ]
+}

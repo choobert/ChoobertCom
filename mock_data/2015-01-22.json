@@ -1,0 +1,42 @@
+{
+  "blog": [
+    {
+      "title": "Food For Thought",
+      "date": "01/22/2015",
+      "content": [
+        {
+          "type": "text",
+          "title": "Blog Ideas",
+          "content": [
+            "<ul>",
+            " <li>How to convert a Java Project into a Java Web Project?",
+            "   <ul>",
+            "     <li>In school, we created a text based adventure game. The world MUST see!</li>",
+            "   </ul>",
+            " </li>",
+            " <li>How to set-up a Basic RPG Project in Unity</li>",
+            "</ul>"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Game Ideas",
+          "content": [
+            "<ul>",
+            " <li>Convert text based game into a small 3D adventure</li>",
+            " <li>Game for the nephew with bright colors and fun sounds?</li>",
+            " <li>Tetris / Puzzle Pirates Sword-Fighting Game",
+            "   <ul>",
+            "     <li>control 2 game areas at once</li>",
+            "     <li>left side block continue to fall (fill up your screen and you lose)</li>",
+            "     <li>make a big combo on the left side creates pieces on the left side</li>",
+            "     <li>build the right side into \"attacks\" that smash your opponents blocks</li>",
+            "   </ul>",
+            " </li>",
+            "</ul>"
+          ]
+        }
+      ]
+    }
+  ]
+}

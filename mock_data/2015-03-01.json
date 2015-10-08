@@ -1,0 +1,32 @@
+{
+  "blog": [
+    {
+      "title": "The Jelly Monster",
+      "date": "03/01/2015",
+      "content": [
+        {
+          "type": "text",
+          "content": [
+            "After completion of the 2D training by Microsoft I have been re-inspired to attempt vector art for Breadjamin Butters.",
+            "I certainly acknowledge that Breadjamin needs some work still but he looks far better than he ever has in the past."
+          ]
+        },
+        {
+          "type": "center",
+          "content": [
+            "<a href='https://choobert.files.wordpress.com/2015/03/breadjamin.png'>",
+            " <img src='https://choobert.files.wordpress.com/2015/03/breadjamin.png?w=300' alt='breadjamin' />",
+            "</a>"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Although I very much like the new art I hope to participate in the #OneGameAMonth challenge. I think that completing a",
+            "very simple game a month will not only force me to have a deadline but also make me stop spec creep."
+          ]
+        }
+      ]
+    }
+  ]
+}

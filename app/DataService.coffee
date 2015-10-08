@@ -9,8 +9,16 @@ angular.module('choobert')
       if response?
         _.extend(@data, response.data)
 
+    blogUrl = "2014-07-31.json"
+    $http.get(config.apiBase + blogUrl).then (response) =>
+      if response?
+        _.extend(@data, response.data)
+
   projects: ->
     @data.projects
 
   project: (id) ->
     _.find(@projects(), { 'id': id})
+
+  blog: ->
+    @data.blog

@@ -1,4 +1,5 @@
 angular.module 'choobert.blog', [
+  'ngSanitize'
   'ui.router'
 ]
 
