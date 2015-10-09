@@ -1,0 +1,7 @@
+<div class='entry' ng-repeat='section in entryCtrl.getContent()'>
+  <div class='{{section.type}}'>
+    <h3 ng-if='section.title != null'>{{section.title}}</h3>
+    <div ng-bind-html='section.content.join("\n")'></div>
+    <youtube-video ng-if='section.youtube != null'video-id="section.youtube"></youtube-video>
+  </div>
+</div>

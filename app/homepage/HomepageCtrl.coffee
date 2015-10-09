@@ -1,7 +1,7 @@
 angular.module('choobert.homepage')
 .controller 'HomepageCtrl', (DataService) ->
 
-  # start refreshing
+  #  Get Data
   DataService.refreshData()
 
   @previewProjects = ->

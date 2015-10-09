@@ -9,7 +9,7 @@ angular.module('choobert')
       if response?
         _.extend(@data, response.data)
 
-    blogUrl = "2014-07-31.json"
+    blogUrl = "blog.json"
     $http.get(config.apiBase + blogUrl).then (response) =>
       if response?
         _.extend(@data, response.data)
@@ -22,3 +22,16 @@ angular.module('choobert')
 
   blog: ->
     @data.blog
+
+  getBlogEntry: (url) ->
+    if !@data.entry?
+      @data.entry = {}
+
+    if @data.entry.url?
+      return @data.entry.url
+
+    $http.get(config.apiBase + url).then (response) =>
+      if response?
+        @data.entry.url = response.data
+        console.log response.data
+        return @data.entry.url

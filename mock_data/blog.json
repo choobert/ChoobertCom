@@ -2,59 +2,73 @@
   "blog": [
     {
       "title": "Unity Game Framework - Creating the GameManager",
-      "date": "2015/04/03"
+      "date": "2015/04/03",
+      "url": "2015-04-03.json"
     },
     {
       "title": "MeatlyJam Post Mortem",
-      "date": "2015/03/29"
+      "date": "2015/03/29",
+      "url": "2015-03-29.json"
     },
     {
       "title": "MeatlyJam Competition Part 1",
-      "date": "2015/03/28"
+      "date": "2015/03/28",
+      "url": "2015-03-28.json"
     },
     {
       "title": "The Jelly Monster",
-      "date": "2015/03/01"
+      "date": "2015/03/01",
+      "url": "2015-03-01.json"
     },
     {
       "title": "Unity 2d - Microsoft Virtual Academy",
-      "date": "2015/02/19"
+      "date": "2015/02/19",
+      "url": "2015-02-19.json"
     },
     {
       "title": "Configuring Nano",
-      "date": "2015/02/17"
+      "date": "2015/02/17",
+      "url": "2015-02-17.json"
     },
     {
       "title": "MySQL \"error processing mysql-server-5.5 (-configure)\" SOLVED",
-      "date": "2015/02/13"
+      "date": "2015/02/13",
+      "url": "2015-02-13.json"
     },
     {
       "title": "Raspberry Pi as a Web Server",
-      "date": "2015/02/12"
+      "date": "2015/02/12",
+      "url": "2015-02-12.json"
     },
     {
       "title": "The Raspberry Pi Experience",
-      "date": "2015/02/11"
+      "date": "2015/02/11",
+      "url": "2015-02-11.json"
     },
     {
       "title": "Food For Thought",
-      "date": "2015/01/22"
+      "date": "2015/01/22",
+      "url": "2015-01-22.json"
     },
     {
       "title": "Getting Back Into It",
-      "date": "2015/01/21"
+      "date": "2015/01/21",
+      "url": "2015-01-21.json"
     },
     {
       "title": "FPS Continued",
-      "date": "2014/07/31"
+      "date": "2014/07/31",
+      "url": "2014-07-31.json"
     },
     {
       "title": "Beginnings of Unity",
-      "date": "2014/07/27"
+      "date": "2014/07/27",
+      "url": "2014-07-27.json"
     },
     {
       "title": "Shoot 'Em Up",
-      "date": "2014/07/10"
+      "date": "2014/07/10",
+      "url": "2014-07-10.json"
     }
   ]
 }

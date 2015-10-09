@@ -1,10 +1,13 @@
 angular.module('choobert.blog')
 .controller 'BlogCtrl', (DataService) ->
 
-  # start refreshing
+  # Get Data
   DataService.refreshData()
 
   @blog = ->
     DataService.blog()
+
+  @getBlogEntry = (url) ->
+    DataService.getBlogEntry(url)
 
   return this

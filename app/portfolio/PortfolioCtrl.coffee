@@ -1,7 +1,7 @@
 angular.module('choobert.portfolio')
 .controller 'PortfolioCtrl', (DataService) ->
 
-  # start refreshing
+  # Get Data
   DataService.refreshData()
 
   @projects = ->

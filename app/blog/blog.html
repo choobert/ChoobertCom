@@ -1,13 +1,17 @@
 <div id="blog">
-  <div class='section' ng-repeat='entry in blog.blog()'>
+
+  <div class='section' ng-repeat='entry in blog.blog() track by entry.url'>
     <div class='title'>{{entry.title}}</div>
-    <div class='entry' ng-repeat='section in entry.content'>
+    <blog-entry url='entry.url'></blog-entry>
+
+    <!-- <div class='entry' ng-repeat='section in entry.content track by entry.date'>
       <div class='{{section.type}}'>
         <h3 ng-if='section.title != null'>{{section.title}}</h3>
         <div ng-bind-html='section.content.join("\n")'></div>
 
-        <youtube-video video-id="section.youtube"></youtube-video>
-      </div>
+        <youtube-video ng-if='section.youtube != null'video-id="section.youtube"></youtube-video>
+
+      </div> -->
     </div>
   </div>
 </div>
