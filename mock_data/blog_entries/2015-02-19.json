@@ -26,13 +26,9 @@
         {
           "type": "center",
           "content": [
-            "<a href='https://choobert.files.wordpress.com/2015/02/unityprefs.png'>",
-            "  <img src='https://choobert.files.wordpress.com/2015/02/unityprefs.png?w=300' alt='unityprefs' />",
-            "</a>",
-            "<a href='https://choobert.files.wordpress.com/2015/02/unityexamplerun.png'>",
-            "  <img src='https://choobert.files.wordpress.com/2015/02/unityexamplerun.png?w=300' alt='unityexamplerun' />",
-            "</a>"
-          ]
+            "<img src='/blog_entries/images/unityprefs.png' alt='unityprefs' />",
+            "<img src='/blog_entries/images/unityexamplerun.png' alt='unityexamplerun' />"
+            ]
         }
       ]
     }

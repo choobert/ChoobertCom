@@ -3,10 +3,7 @@ angular.module('choobert.contact')
 
   @sendMessage = (formData) ->
     if formData.$valid
-      url = 'http://choobert.com/php/contact-form.php'
-
-      console.log formData
-      console.log @name
+      url = 'php/contact-form.php'
 
       data = {
         name: @name
@@ -15,12 +12,21 @@ angular.module('choobert.contact')
         message: @message
       }
 
+      console.log 'Sending:'
+      console.log data
+      console.log '------------'
+
       $http.post(url, data).
       success( (data, status, headers, config) ->
         if data.success
           console.log "successful"
         else
           alert data.message
+
+          console.log data
+          console.log status
+          console.log headers
+          console.log config
         return
       ).error (data, status, headers, config) ->
         alert "Error: " + status

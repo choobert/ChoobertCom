@@ -14,9 +14,7 @@
         {
           "type": "center",
           "content": [
-            "<a href='https://choobert.files.wordpress.com/2015/03/breadjamin.png'>",
-            " <img src='https://choobert.files.wordpress.com/2015/03/breadjamin.png?w=300' alt='breadjamin' />",
-            "</a>"
+            " <img src='/blog_entries/images/breadjamin.png' alt='breadjamin' />"
           ]
         },
         {

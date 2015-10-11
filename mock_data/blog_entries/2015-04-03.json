@@ -154,9 +154,7 @@
         {
           "type": "center",
           "content": [
-            "<a href=\"https://choobert.files.wordpress.com/2015/04/frameworklogs1.png\">",
-            " <img class='aligncenter size-full wp-image-114' src='https://choobert.files.wordpress.com/2015/04/frameworklogs1.png' />",
-            "</a>"
+            " <img src='/blog_entries/images/frameworklogs.png' />"
           ]
         },
         {

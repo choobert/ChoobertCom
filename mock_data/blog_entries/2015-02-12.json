@@ -16,9 +16,7 @@
         {
           "type": "center",
           "content": [
-            "<a href='https://choobert.files.wordpress.com/2015/02/port_forwarding.png'>",
-            "  <img src='https://choobert.files.wordpress.com/2015/02/port_forwarding.png?w=300' alt='port_forwarding' />",
-            "</a>"
+            "<img src='/blog_entries/images/port_forwarding.png' alt='port_forwarding' />"
           ]
         },
         {

@@ -8,7 +8,6 @@ angular.module('choobert.blog')
     BlogEntryService.getBlogEntry(@url)
 
   @getContent = ->
-    console.log @getData().content
     @getData().content
 
   return this

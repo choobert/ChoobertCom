@@ -22,16 +22,3 @@ angular.module('choobert')
 
   blog: ->
     @data.blog
-
-  getBlogEntry: (url) ->
-    if !@data.entry?
-      @data.entry = {}
-
-    if @data.entry.url?
-      return @data.entry.url
-
-    $http.get(config.apiBase + url).then (response) =>
-      if response?
-        @data.entry.url = response.data
-        console.log response.data
-        return @data.entry.url
