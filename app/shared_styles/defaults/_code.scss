@@ -1,0 +1,59 @@
+.cmd {
+  border-radius: 5px;
+  background-color: $black;
+  padding: 10px;
+  color: $white;
+  font-family: monospace;
+}
+
+.code {
+  border-radius: 5px;
+  background-color: #eeeeee;
+  padding: 10px;
+  font-family: monospace;
+
+  em {
+    color: #0000ff;
+    font-style: normal;
+  }
+
+  comment {
+    color: #008000;
+  }
+
+  string {
+    color: #a31515;
+  }
+
+  var {
+    color: #2b91af;
+    font-style: normal;
+  }
+}
+
+.sql {
+  border-radius: 5px;
+  background-color: #eeeeee;
+  padding: 10px;
+  font-family: monospace;
+
+  comment {
+    color: #008000;
+  }
+
+  keyword {
+    color: #0000ff;
+  }
+
+  function {
+    color: #ff00ff;
+  }
+
+  string {
+    color: #ff0000;
+  }
+
+  system {
+    color: #008034;
+  }
+}

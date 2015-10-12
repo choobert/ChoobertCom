@@ -1,0 +1,15 @@
+<div>
+  Creating a database from a backup on a new server will likely lead to a user without a login, also known as an <b>orphaned</b> user. Although the login and user
+  may be on the server and database, they may not be linked together. To detect any orphaned users on the database execute the following query:
+
+  <pre class='sql'>
+    <keyword>EXEC</keyword> <system>sp_change_users_login</system> @Action = <string>'Report'</string>
+  </pre>
+
+  Once you have identified any orphaned users, fixing them is extremely easy. Simply run the same statement
+  <pre class='sql'>
+    <keyword>EXEC</keyword> <system>sp_change_users_login</system> @Action = <string>'Auto_Fix', 'INSERT_LOGIN_HERE'
+  </pre>
+
+  For more information, try <a href='http://www.mssqltips.com/sqlservertip/1590/understanding-and-dealing-with-orphaned-users-in-a-sql-server-database'>MS SQL Tips</a>
+</div>

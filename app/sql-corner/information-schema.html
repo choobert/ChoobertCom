@@ -1,0 +1,49 @@
+<div>
+  <div>
+    Have you ever needed a quick overview of the tables or views in your database?
+    Have you ever wanted to identify which tables/views had a particular column or set of columns?
+  </div>
+  <div>
+    Fortunately, <b>metadata</b> is saved internally to SQL Server and can be queried in various ways. One of
+    of these ways is through the Information Schema Views.
+  </div>
+  <div>
+    Via <a href=''>MSDN:</a>
+  </div>
+  <div>
+    An information schema view is one of several methods SQL Server provides for obtaining metadata.
+    Information schema views provide an internal, system table-independent view of the SQL Server metadata.
+    Information schema views enable applications to work correctly although significant changes have been
+    made to the underlying system tables. The information schema views included in SQL Server comply
+    with the ISO standard definition for the INFORMATION_SCHEMA.
+  </div>
+  <div>
+    The three views I have used the most are mentioned above, but more are provided and have valuable uses.
+    I highly recommend viewing the MSDN page and checking out all of the available options.
+    <ul>
+      <li><a href='https://msdn.microsoft.com/en-us/library/ms186224.aspx'>TABLES</a></li>
+      <li><a href='https://msdn.microsoft.com/en-us/library/ms181381.aspx'>VIEWS</a></li>
+      <li><a href='https://msdn.microsoft.com/en-us/library/ms188348.aspx'>COLUMNS</a></li>
+    </ul>
+  </div>
+  <pre class='sql'>
+    <comment>-- Query to get all tables in a database</comment>
+    <keyword>SELECT</keyword> *
+        <keyword>FROM</keyword> <system>INFORMATION_SCHEMA.TABLES<system>
+
+    <comment>-- Query for all views in a database</comment>
+    <keyword>SELECT</keyword> *
+        <keyword>FROM</keyword> <system>INFORMATION_SCHEMA.COLUMNS<system>
+
+    <comment>-- Query for tables or views with a particular column</comment>
+    <keyword>SELECT</keyword> *
+        <keyword>FROM</keyword> <system>INFORMATION_SCHEMA.COLUMNS<system>
+        <keyword>WHERE</keyword> COLUMN_NAME LIKE '%POTENTIAL_COLUMN_NAME%'
+  </pre>
+
+  <div>
+    For more information view
+    <a href='https://msdn.microsoft.com/en-us/library/ms186778.aspx'>Information Schema Views</a>
+    on MSDN.
+  </div>
+</div>

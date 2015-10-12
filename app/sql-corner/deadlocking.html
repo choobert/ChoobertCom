@@ -1,0 +1,68 @@
+<div>
+  <pre class='sql'>
+    <keyword>SELECT</keyword> spid, hostname, hostprocess, <function>program_name</function> , blocked
+       <keyword>FROM</keyword> <system>sys.sysprocesses</system>
+       <keyword>WHERE</keyword> blocked != 0
+          <keyword>OR</keyword> spid <keyword>IN</keyword> ( <keyword>SELECT</keyword> blocked
+                          <keyword>FROM</keyword> <system>sys.sysprocesses</system>
+                          <keyword>WHERE</keyword> blocked != 0 )
+                          <keyword>ORDER BY</keyword> blocked
+  </pre>
+
+
+  <pre class='sql'>
+    <keyword>SELECT</keyword> SQLTXT.TEXT,
+          REQ.session_id,
+          REQ.status,
+          REQ.command,
+          REQ.cpu_time,
+          REQ.total_elapsed_time
+       <keyword>FROM</keyword> sys.dm_exec_requests REQ
+       <keyword>CROSS APPLY</keyword> <system>sys.dm_exec_sql_text</system>(<keyword>sql_handle</keyword>) <keyword>AS</keyword> SQLTXT
+       <keyword>ORDER BY</keyword> REQ.session_id
+  </pre>
+
+
+  Before killing the process, capture the following result set
+
+  <pre class='sql'>
+    <keyword>exec</keyword> sp_lock;
+  </pre>
+
+  I don’t know of a good way to describe exactly how to find the query that is doing the blocking as it feels more art than science to me. Most of the time the SPID you are looking for will have its “Blocked” column set to 0, and you will see a lot of other rows whose Blocked column will be its SPID. The goal is to figure out which of the SPIDs is at the top of the chain, and then stop if with the following command:
+
+  <pre class='sql'>
+    <keyword>kill</keyword> {SPID}
+  </pre>
+
+
+</div>
+<!--
+
+SELECT  CAST (event_data . value( '(event/data/value)[1]' , 'varchar(max)' ) AS XML ) AS DeadlockGraph
+FROM    ( SELECT    XEvent . query( '.' ) AS event_data
+         FROM      (     -- Cast the target_data to XML
+                SELECT     CAST ( target_data AS XML) AS TargetData
+                FROM       sys . dm_xe_session_targets st JOIN sys .dm_xe_sessions s ON s . address = st. event_session_address
+                WHERE      name = 'system_health' AND target_name = 'ring_buffer'
+               ) AS Data -- Split out the Event Nodes
+     CROSS APPLY TargetData. nodes( 'RingBufferTarget/event[@name="xml_deadlock_report"]' ) AS XEventData ( XEvent )
+   ) AS tab ( event_data )
+
+Click on the first row. It will launch a new tab with the XML data expanded.
+
+	* One of the first nodes will be <process-list> <process id=….>.  Ensure that the “lasttranstarted” is for the current day/time (within the last 10 minutes). If not, continue opening the XML data until you reach one for the current day/time.
+	* The next child node will be <executionStack>. There will be one or more <frame …/> nodes.
+	*
+		* The frame node will contain a “sqlhandle”. Execute the following query with that sqlhandle
+SELECT * FROM sys .dm_exec_sql_text ( 0x0300060027d17c148d4bf900c5a100000100000000000000 );
+		* Repeat this step for each <frame> node under each <process> node.
+
+	* After the <process-list> node there will be a <resource-list> node. This is the information about who owns and who wants each resource.
+	*
+		*
+Look for a <pagelock…> or a <keylock…> node. If it exists, it will have a “pageid” and an “associatedObjectId”. Use the associatedObjectId in the following query:
+SELECT OBJECT_SCHEMA_NAME ( object_id), OBJECT_NAME( object_id ), * FROM sys . partitions WHERE hobt_id IN (72057617270374400 );
+
+
+	* Record the results of the above, along with the expanded XML data. -->

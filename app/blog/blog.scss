@@ -15,39 +15,6 @@
       margin-bottom: 20px;
     }
 
-    .cmd {
-      border-radius: 5px;
-      background-color: $black;
-      padding: 10px;
-      color: $white;
-      font-family: monospace;
-    }
-
-    .code {
-      border-radius: 5px;
-      background-color: #eeeeee;
-      padding: 10px;
-      font-family: monospace;
-
-      em {
-        color: #0000ff;
-        font-style: normal;
-      }
-
-      comment {
-        color: #008000;
-      }
-
-      string {
-        color: #a31515;
-      }
-
-      var {
-        color: #2b91af;
-        font-style: normal;
-      }
-    }
-
     h3 {
       margin-top: 40px;
     }

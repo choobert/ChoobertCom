@@ -1,0 +1,53 @@
+<!--  -->
+<div>
+
+  This will clear all the open conversations much faster. However, I think this is advisable only on test environments where you need a quick way to cleanup the messages and open conversations. On production environment, it is always advisable to do close the conversations one-by-one, gracefully.
+
+  <pre class='sql'>
+    <comment>-- clear queue quickly - DANGEROUS</comment>
+    <keyword>ALTER DATABASE</keyword> BrokerTestDB <keyword>SET NEW_BROKER WITH ROLLBACK IMMEDIATE</keyword>
+  </pre>
+
+
+
+  <pre class='sql'>
+
+    <comment>-- clear queue slowly - SAFER</comment>
+    <keyword>BEGIN TRY</keyword>
+
+        <comment>-- create a mkeywordory table. I dont prefer cursors usually</comment>
+        <keyword>DECLARE</keyword> @t <keyword>TABLE</keyword>( AutoID <keyword>INT IDENTITY</keyword>, ConversationHandle <keyword>UNIQUEIDENTIFIER</keyword>)
+
+        <comment>-- insert the handles of all open conversations to the
+        -- mkeywordory table</comment>
+        <keyword>INSERT INTO</keyword> @t (ConversationHandle)
+            <keyword>SELECT</keyword> [conversation_handle]
+                <keyword>FROM</keyword> sys.conversation_endpoints
+
+        <comment>-- local variables</comment>
+        <keyword>DECLARE</keyword> @cnt <keyword>INT</keyword>, @max <keyword>INT</keyword>, @handle <keyword>UNIQUEIDENTIFIER</keyword>
+        <keyword>SELECT</keyword> @cnt = 1, @max = <function>COUNT</function>()*)
+            <keyword>FROM</keyword> @t
+
+        <comment>-- run a loop for each row in the mkeywordory table</comment>
+        <keyword>WHILE</keyword> @cnt &lt;= @max
+        <keyword>BEGIN</keyword>
+            <comment>-- read the conversation_handle</comment>
+            <keyword>SELECT</keyword> @handle = ConversationHandle
+                <keyword>FROM</keyword> @t
+                <keyword>WHERE</keyword> AutoID = @cnt
+
+            <comment>-- end conversation</comment>
+            <keyword>PRINT</keyword> 'Closing conversation: ' + <function>CAST</function>(@handle <keyword>AS VARCHAR</keyword>(50))
+            <keyword>END CONVERSATION</keyword> @handle <keyword>WITH</keyword> CLEANUP
+
+            <comment>-- increment counter</comment>
+            <keyword>SELECT</keyword> @cnt = @cnt + 1
+        <keyword>END</keyword>
+
+    <keyword>END TRY</keyword>
+    <keyword>BEGIN CATCH</keyword>
+        <keyword>PRINT</keyword> <function>ERROR_MESSAGE()</function>
+    <keyword>END CATCH</keyword>
+  </pre>
+</div>

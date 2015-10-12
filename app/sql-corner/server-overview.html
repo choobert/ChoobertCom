@@ -1,0 +1,51 @@
+<div>
+  Active Queries
+  <pre class='sql'>
+    <keyword>SELECT</keyword> SQLTXT.TEXT,
+            REQ.session_id,
+            REQ.status,
+            REQ.command,
+            REQ.cpu_time,
+            REQ.total_elapsed_time
+          <keyword>FROM</keyword> <system>sys.dm_exec_requests</system> REQ
+          <keyword>CROSS APPLY</keyword> <system>sys.dm_exec_sql_text</system>( <keyword>sql_handle</keyword> ) <keyword>AS</keyword> SQLTXT
+          <keyword>ORDER BY</keyword> REQ.session_id
+    </pre>
+
+    Amount of Disk Space
+    <pre class='sql'>
+      <keyword>SELECT</keyword> <function>OBJECT_SCHEMA_NAME</function>(<function>object_id</function>) <keyword>AS</keyword> SchemaName,
+             <function>OBJECT_NAME</function>(<function><function>object_id</function></function>) <keyword>AS</keyword> TableName,
+             <function>SUM</function>(CASE WHEN index_id IN (0,1) THEN row_count ELSE 0 END) <keyword>AS</keyword> Rows,
+             <function>SUM</function>(CASE WHEN index_id IN (0,1) THEN reserved_page_count ELSE 0 END) <keyword>AS</keyword> Data_Pages,
+             <function>SUM</function>(CASE WHEN index_id > 1 THEN reserved_page_count ELSE 0 END) <keyword>AS</keyword> Index_Pages
+         <keyword>FROM</keyword> <system>sys.dm_db_partition_stats</system>
+      <keyword>GROUP BY</keyword> <function>OBJECT_SCHEMA_NAME</function>(<function>object_id</function>), <function>OBJECT_NAME</function>(<function>object_id</function>)
+      )
+      <keyword>SELECT</keyword> SchemaName, TableName, Rows,
+             Data_Pages * 8 <keyword>AS</keyword> DataSizeKB, -- In SQL Server 1 Page = 8 KB
+             Index_Pages * 8 <keyword>AS</keyword> IndexSizeKB,
+             (Data_Pages + Index_Pages) * 8 <keyword>AS</keyword> TotalSizeKB,
+             (Data_Pages + Index_Pages) /128 <keyword>AS</keyword> TotalSizeMB
+         <keyword>FROM</keyword> TableSize
+         <keyword>ORDER BY</keyword> 6 <keyword>DESC</keyword>
+    </pre>
+
+    Size of Tables
+    <pre class='sql'>
+      <keyword>SELECT</keyword> t. NAME <keyword>AS</keyword> TableName,
+              p. rows <keyword>AS</keyword> RowCounts,
+          <function>SUM</function>( a.total_pages ) * 8 AS TotalSpaceKB,
+          <function>SUM</function>( a.used_pages ) * 8 AS UsedSpaceKB,
+          (<function>SUM</function> (a. total_pages) - <function>SUM</function> (a. used_pages)) * 8 AS UnusedSpaceKB
+          <keyword>FROM</keyword> sys. tables t
+          <keyword>INNER JOIN</keyword> <system>sys.allocation_units</system> a <keyword>ON</keyword> p.partition_id = a.container_id
+          <keyword>INNER JOIN</keyword> <system>sys.indexes</system> i <keyword>ON</keyword> t.object_id = i.object_id</function>
+          <keyword>INNER JOIN</keyword> <system>sys.partitions</system> p <keyword>ON</keyword> i.object_id = p.object_id <keyword>AND</keyword> i.index_id = p.index_id
+          <keyword>WHERE</keyword> t.NAME <keyword>NOT LIKE</keyword> 'dt%'
+              <keyword>AND</keyword> t.is_ms_shipped = 0
+              <keyword>AND</keyword> i.object_id > 255
+      <keyword>GROUP BY</keyword> t. Name, p.Rows
+      <keyword>ORDER BY</keyword> t. Name
+    </pre>
+</div>
